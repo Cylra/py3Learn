@@ -1,0 +1,5 @@
+wxPython使用python2.x
+sudo apt-get install python-wxgtk3.0
+
+执行程序
+python xi.py
