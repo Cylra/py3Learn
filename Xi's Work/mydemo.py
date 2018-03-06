@@ -115,15 +115,10 @@ class MyFrame1 ( wx.Frame ):
 		
 		gbSizer1.Add( self.m_button_clsS, wx.GBPosition( 10, 21 ), wx.GBSpan( 1, 1 ), wx.ALIGN_CENTER|wx.ALL, 5 )
 		
-		self.m_staticText_rTime = wx.StaticText( self, wx.ID_ANY, u"运行时间", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText_rTime.Wrap( -1 )
-		self.m_staticText_rTime.SetFont( wx.Font( 12, 70, 90, 90, False, wx.EmptyString ) )
-		
-		gbSizer1.Add( self.m_staticText_rTime, wx.GBPosition( 12, 5 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
-		
-		self.m_textCtrl7 = wx.TextCtrl( self, wx.ID_ANY, u"10", wx.DefaultPosition, wx.Size( 150,-1 ), 0 )
-		self.m_textCtrl7.SetMaxLength( 15 ) 
-		gbSizer1.Add( self.m_textCtrl7, wx.GBPosition( 12, 6 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
+		m_radioBox1Choices = [ u"30 30 30", u"40 40 40", u"50 50 50" ]
+		self.m_radioBox1 = wx.RadioBox( self, wx.ID_ANY, u"运行时间(秒)", wx.DefaultPosition, wx.Size( 300,-1 ), m_radioBox1Choices, 1, wx.RA_SPECIFY_ROWS )
+		self.m_radioBox1.SetSelection( 0 )
+		gbSizer1.Add( self.m_radioBox1, wx.GBPosition( 11, 5 ), wx.GBSpan( 1, 26 ), wx.ALL, 5 )
 		
 		
 		bSizer1.Add( gbSizer1, 1, wx.EXPAND, 5 )

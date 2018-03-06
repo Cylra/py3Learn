@@ -17,6 +17,10 @@ class xiFrame(mydemo.MyFrame1):
 		server_User = self.m_textCtrl5.GetValue()
 		server_Pwd  = self.m_textCtrl6.GetValue()
 
+		kk = self.m_radioBox1.GetStringSelection()
+		print(kk)
+		kk = self.m_radioBox1.GetSelection()
+		print(kk)
 		try:
 			run_Time = int(self.m_textCtrl7.GetValue())
 		except Exception:
